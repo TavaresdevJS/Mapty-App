@@ -90,14 +90,14 @@ class App {
   _getPosition() {
     if (navigator.geolocation)
       navigator.geolocation.getCurrentPosition(
-        this._loardMap.bind(this),
+        this._loadMap.bind(this),
         function () {
           alert('Could not get your position');
         },
       );
   }
 
-  _loardMap(position) {
+  _loadMap(position) {
     const { latitude } = position.coords;
     const { longitude } = position.coords;
     console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
